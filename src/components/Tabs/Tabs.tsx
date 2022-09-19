@@ -5,7 +5,7 @@ import {TTabItems} from "../../types";
 
 interface TTabsProps {
   tabs: TTabItems[]
-  changeTab: (val: any) => void
+  changeTab: (val?: any) => void
   active?: any
   textOnly?: boolean
   iconOnly?: boolean
