@@ -41,9 +41,9 @@ export const Tabs: React.FC<TTabsProps> = (props: TTabsProps): ReactElement => {
 
 };
 
-Tabs.defaultProps = {
-  textOnly: false,
-  iconOnly: false,
-  inset: false,
-  showActiveText: false,
-};
+// Tabs.defaultProps = {
+//   textOnly: false,
+//   iconOnly: false,
+//   inset: false,
+//   showActiveText: false,
+// };
