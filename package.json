@@ -1,0 +1,30 @@
+{
+  "name": "@rinat-90/template-ui-library",
+  "version": "0.0.2",
+  "description": "Bantr UI Library",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "author": "Rinat Ibragimov",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@types/react": "^18.0.20",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "rollup": "^2.79.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "typescript": "^4.8.3"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/rinat-90"
+  }
+}
