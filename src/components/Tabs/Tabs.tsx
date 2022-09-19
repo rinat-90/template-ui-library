@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import classnames from 'classnames';
 import {TTabItems} from "../../types";
 
-export type TTabsProps = {
+interface TTabsProps {
   tabs: TTabItems[]
   changeTab: (val: any) => void
   active?: any
