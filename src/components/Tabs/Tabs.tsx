@@ -12,7 +12,7 @@ export type TTabsProps = {
   inset?: boolean
   showActiveText?: boolean
 }
-export const Tabs: React.FC<TTabsProps> = (props): ReactElement => {
+export const Tabs: React.FC<TTabsProps> = (props: TTabsProps): ReactElement => {
   return <div className={classnames('tabs', { 'inset': props.inset })}>
     {props.tabs.length > 0 && props.tabs.map(tab => (
       <div
