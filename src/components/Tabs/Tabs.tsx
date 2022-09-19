@@ -12,25 +12,33 @@ interface TTabsProps {
   inset?: boolean
   showActiveText?: boolean
 }
-export const Tabs: React.FC<TTabsProps> = (props: TTabsProps): ReactElement => {
-  return <div className={classnames('tabs', { 'inset': props.inset })}>
-    {props.tabs.length > 0 && props.tabs.map(tab => (
+export const Tabs: React.FC<TTabsProps> = ({
+   tabs,
+   changeTab,
+   active,
+   textOnly,
+   iconOnly,
+   inset,
+   showActiveText,
+}): ReactElement => {
+  return <div className={classnames('tabs', { 'inset': inset })}>
+    {tabs.length > 0 && tabs.map(tab => (
       <div
         key={tab.title}
-        onClick={() => props.changeTab(tab.value)}
+        onClick={() => changeTab(tab.value)}
         className={classnames('tabs-item', {
-          'active': props.active === tab.value,
-          'rounded': props.showActiveText,
+          'active': active === tab.value,
+          'rounded': showActiveText,
         })}
       >
-        {props.iconOnly && !props.showActiveText
+        {iconOnly && !showActiveText
           ? <span className='icon'>{tab.icon}</span>
-          : props.iconOnly && props.showActiveText
+          : iconOnly && showActiveText
             ? <>
               {tab.icon && <span className='icon'>{tab.icon}</span>}
-              {tab.value === props.active && <span className='title'>{tab.title}</span>}
+              {tab.value === active && <span className='title'>{tab.title}</span>}
             </>
-            : props.textOnly ? <span className='title'>{tab.title}</span>
+            : textOnly ? <span className='title'>{tab.title}</span>
               :<>
                 {tab.icon && <span className='icon'>{tab.icon}</span>}
                 <span className='title'>{tab.title}</span>
@@ -41,9 +49,9 @@ export const Tabs: React.FC<TTabsProps> = (props: TTabsProps): ReactElement => {
 
 };
 
-// Tabs.defaultProps = {
-//   textOnly: false,
-//   iconOnly: false,
-//   inset: false,
-//   showActiveText: false,
-// };
+Tabs.defaultProps = {
+  textOnly: false,
+  iconOnly: false,
+  inset: false,
+  showActiveText: false,
+};
