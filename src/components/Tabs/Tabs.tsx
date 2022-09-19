@@ -42,6 +42,7 @@ export const Tabs = (props: TTabsProps): ReactElement => {
 };
 
 Tabs.defaultProps = {
+  tabs: Array,
   textOnly: false,
   iconOnly: false,
   inset: false,
