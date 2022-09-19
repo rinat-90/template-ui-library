@@ -6,11 +6,11 @@ import {TTabItems} from "../../types";
 export type TTabsProps = {
   tabs: TTabItems[]
   changeTab: (val: any) => void
-  active: any
-  textOnly: boolean
-  iconOnly: boolean
-  inset: boolean
-  showActiveText: boolean
+  active?: any
+  textOnly?: boolean
+  iconOnly?: boolean
+  inset?: boolean
+  showActiveText?: boolean
 }
 export const Tabs = (props: TTabsProps): ReactElement => {
   return <div className={classnames('tabs', { 'inset': props.inset })}>

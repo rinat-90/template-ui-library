@@ -1,6 +1,6 @@
 {
   "name": "@rinat-90/template-ui-library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Bantr UI Library",
   "scripts": {
     "rollup": "rollup -c"
@@ -11,6 +11,7 @@
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-typescript": "^8.5.0",
+    "rollup-plugin-scss": "^3.0.0",
     "@types/react": "^18.0.20",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
@@ -27,8 +28,5 @@
   "types": "dist/index.d.ts",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/rinat-90"
-  },
-  "dependencies": {
-    "rollup-plugin-scss": "^3.0.0"
   }
 }
