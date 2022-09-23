@@ -1,4 +1,4 @@
-import './Tabs.css';
+import './Tabs.scss';
 import React, { ReactElement } from 'react';
 import classnames from 'classnames';
 import {TTabItems} from "../../types";
