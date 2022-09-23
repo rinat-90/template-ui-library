@@ -12,7 +12,7 @@ interface TTabsProps {
   inset?: boolean
   showActiveText?: boolean
 }
-export const Tabs: React.FC<TTabsProps> = ({
+const Tabs: React.FC<TTabsProps> = ({
    tabs,
    changeTab,
    active,
@@ -55,3 +55,5 @@ Tabs.defaultProps = {
   inset: false,
   showActiveText: false,
 };
+
+export default Tabs;
