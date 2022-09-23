@@ -1,0 +1,58 @@
+@import './functions.scss';
+@import './typography.scss';
+
+// Colors
+$black: #231F20;
+$dark-grey: #B5B4B8;
+$grey: #DCDDDE;
+$light-grey: #F7F7F7;
+$white: #FFFFFE; // Should be #FFFFF; this hack prevents automatic shortened Hex codes bug
+$darker-grey: #878689;
+$grey-1: #B5B3B7;
+$grey-2: #00000029;
+$grey-3: #EBEBEB;
+$deep-purple: #8917F2;
+$light-purple: #F7EFFF;
+$lighter-purple: #B07AF0;
+
+$brand-color-primary: #D6DE23;
+$brand-color-alt: #E6ED5D;
+$brand-color-light: #F6FAA0;
+
+// Font-sizes
+$x-small-font: calc-pt-to-rem(9pt);
+$small-font: calc-pt-to-rem(12pt);
+$medium-font: calc-pt-to-rem(15pt);
+$large-font: calc-pt-to-rem(26pt);
+$x-large-font: calc-pt-to-rem(28pt);
+$xx-large-font: calc-pt-to-rem(35pt);
+$xxx-large-font: calc-pt-to-rem(50pt);
+
+// Font-weights
+$light-weight: 300;
+$regular-weight: 400;
+$medium-weight:600;
+$heavy-weight: 700;
+$extra-heavy-weight: 800;
+$x-extra-heavy-weight:900;
+
+// App-wide sizes
+$header-height: 4rem;
+$counter-height: 2rem;
+$footer-height: 2.75rem;
+$tiny-avatar-diameter: 2.25rem;
+$xx-small-avatar-diameter: 4rem;
+$x-small-avatar-diameter: 5rem;
+$small-avatar-diameter: 6rem;
+$medium-avatar-diameter: 7rem;
+$avatar-diameter: 10rem;
+$large-avatar-diameter: 9rem;
+$event-header-height: 5rem;
+$event-footer-height: 5rem;
+$event-navigation-header: 4rem;
+$settings-nav-bar-height: 8rem;
+
+:export {
+  black: $black;
+  grey: $grey;
+}

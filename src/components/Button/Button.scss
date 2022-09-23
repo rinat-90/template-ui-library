@@ -1,0 +1,45 @@
+@import '../../styles/index.scss';
+
+.button {
+  border: none;
+  background: $grey-3;
+  padding: 15px 0;
+  border-radius: 5px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+  cursor: pointer;
+
+  &-medium {
+    min-width: 165px;
+  }
+
+  &-small {
+    min-width: 113px;
+    padding: 7px 0;
+  }
+
+  &-large {
+    min-width: 428px;
+  }
+
+  &-primary {
+    background-color: $deep-purple;
+    color: #fff;
+  }
+
+  &-rounded {
+    border-radius: 25px;
+  }
+
+  &-round {
+    border-radius: 50%;
+    @include size(48px);
+  }
+
+  &-outlined {
+    background: none;
+    color: $deep-purple;
+    border: 1px solid $deep-purple;
+  }
+}

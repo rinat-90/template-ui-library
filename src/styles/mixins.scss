@@ -1,0 +1,71 @@
+@import 'functions';
+
+@mixin breakpoint($point) {
+  $bp-mini: '(max-width: 370px)';
+  $bp-mobile: '(max-width: 450px)';
+  $bp-tablet-portrait: '(max-width: 750px)';
+  $bp-tablet-landscape: '(max-width: 900px)';
+  $bp-landscape-view: '(orientation: landscape)';
+  $bp-small-desktop: '(max-width: 1022px)';
+  $bp-medium-viewport: '(max-width: 1023px)';
+  $bp-x-medium-viewport: '(max-width: 1200px)';
+
+  @if $point == mini {
+    @media only screen and #{$bp-mini} { @content; }
+  }
+
+  @else if $point == mobile {
+    @media only screen and #{$bp-mobile} { @content; }
+  }
+
+  @else if $point == tablet-portrait {
+    @media only screen and #{$bp-tablet-portrait} { @content; }
+  }
+
+  @else if $point == tablet-landscape {
+    @media only screen and #{$bp-tablet-landscape} { @content; }
+  }
+
+  @else if $point == landscape-view {
+    @media only screen and #{$bp-landscape-view} { @content; }
+  }
+
+  @else if $point == small-desktop {
+    @media only screen and #{$bp-small-desktop} { @content; }
+  }
+
+  @else if $point == medium-viewport {
+    @media only screen and #{$bp-medium-viewport} { @content; }
+  }
+
+  @else if $point == x-medium-viewport {
+    @media only screen and #{$bp-x-medium-viewport} { @content; }
+  }
+}
+
+@mixin hideScrollbar {
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@mixin boxShadow {
+  box-shadow: 3px 3px 15px #{$black}44;
+}
+
+@mixin square($h, $w: $h, $r: 0) {
+  @include size($h, $w);
+
+  @if $r != 0 {
+    border-radius: $r;
+  }
+}
+
+@mixin size($h, $w: $h) {
+  height: $h;
+  width: $w;
+}

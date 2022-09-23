@@ -1,0 +1,11 @@
+@function calc-pt-to-px($pt) {
+  @return $pt / 1pt * 1.333px;
+}
+
+@function calc-px-to-rem($px) {
+  @return $px / 16px * 1rem;
+}
+
+@function calc-pt-to-rem($pt) {
+  @return calc-px-to-rem(calc-pt-to-px($pt));
+}
