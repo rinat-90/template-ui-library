@@ -1,0 +1,27 @@
+@import '../../styles/index';
+
+.progressbar {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: space-between;
+  width: 100%;
+
+  &-inner {
+    background: $grey-3;
+    border-radius: 15px;
+    height: 15px;
+    width: 100%;
+
+    div {
+      background: linear-gradient(270deg, $brand-color-primary 0%, $brand-color-light 85.71%);
+      border-radius: calc-px-to-rem(15px) calc-px-to-rem(10px) calc-px-to-rem(10px) calc-px-to-rem(15px);
+      height: 100%;
+    }
+  }
+
+  &-count {
+    color: $grey-1;
+  }
+}
