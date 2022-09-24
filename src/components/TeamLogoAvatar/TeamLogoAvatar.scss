@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.text-logo-avatar {
+  @include boxShadow();
+
+  align-items: center;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  height: $x-small-avatar-diameter;
+  justify-content: center;
+  min-width: $x-small-avatar-diameter;
+  overflow: hidden;
+  width: $x-small-avatar-diameter;
+
+  &.large {
+    font-size: x-large;
+    height: $large-avatar-diameter;
+    width: $large-avatar-diameter;
+  }
+
+  &.add-margin {
+    margin-right: 1.5rem;
+    overflow: hidden;
+  }
+
+  &.cursor {
+    cursor: auto;
+  }
+
+  &-img.badge {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &.default {
+      height: 19px;
+      width: 16px;
+    }
+  }
+}

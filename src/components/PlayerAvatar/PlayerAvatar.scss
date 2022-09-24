@@ -1,0 +1,131 @@
+@import '../../styles/index';
+
+.player-avatar-container {
+  position: relative;
+
+  &.align-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .player-avatar {
+    @include boxShadow();
+
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    color: $black;
+    display: flex;
+    font-size: large;
+    height: $x-small-avatar-diameter;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-transform: uppercase;
+    width: $x-small-avatar-diameter;
+
+    &.tiny {
+      font-size: small;
+      height: $tiny-avatar-diameter;
+      width: $tiny-avatar-diameter;
+    }
+
+    &.small {
+      font-size: medium;
+      height: $xx-small-avatar-diameter;
+      width: $xx-small-avatar-diameter;
+    }
+
+    &.medium {
+      font-size: large;
+      height: $medium-avatar-diameter;
+      width: $medium-avatar-diameter;
+    }
+
+    &.large {
+      font-size: x-large;
+      height: $large-avatar-diameter;
+      width: $large-avatar-diameter;
+    }
+
+    &.add-margin {
+      margin-right: 1.5rem;
+    }
+
+    &.pointer {
+      cursor: pointer;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &.confirmed {
+      border: 4.5px solid $brand-color-primary;
+    }
+
+    &.maybe {
+      border: 4.5px solid $grey;
+    }
+
+    &.no {
+      border: 4.5px solid $darker-grey;
+    }
+  }
+
+  .notification-count {
+    right: 13px;
+    top: 0;
+  }
+
+  .captain {
+    bottom: -4px;
+    color: $dark-grey;
+    font-size: $small-font;
+    font-weight: $heavy-weight;
+    position: absolute;
+    right: -4px;
+
+    &.margin-right {
+      right: 18px;
+    }
+  }
+
+  .mvp {
+    background-image: url('../../static/emoji/sport-medal.png');
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    @extend .captain;
+  }
+
+  .player-name {
+    cursor: pointer;
+    margin-top: .5rem;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    max-width: $x-small-avatar-diameter;
+
+    &.tiny {
+      max-width: $tiny-avatar-diameter;
+    }
+
+    &.small {
+      max-width: $xx-small-avatar-diameter;
+    }
+
+    &.medium {
+      max-width: $medium-avatar-diameter;
+    }
+
+    &.large {
+      max-width: $large-avatar-diameter;
+    }
+
+  }
+}

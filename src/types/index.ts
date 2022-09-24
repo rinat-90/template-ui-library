@@ -5,3 +5,10 @@ export type TTabItems = {
   icon?: ReactNode
   value: any
 }
+
+export type TSVGProps = {
+  className?: string;
+  color?: string;
+  height?: string;
+  width?: string;
+}

@@ -7,7 +7,7 @@ type TRsvpButtonProps = {
   text: string,
   rsvpStatus: any
   disabled?: boolean
-  onClick: (e: React.MouseEvent<HTMLElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
   btnType: string
   hideText?: boolean
 };
@@ -27,7 +27,7 @@ const RsvpButton = ({
       ? rsvpStatus === 'yes'
       : rsvpStatus === 'no'
   })}>
-    <Button icon inset rounded label={text}>
+    <Button icon inset rounded={!hideText} round={hideText} label={text} hideText={hideText}>
       <i className='rsvp-btn-icon' />
     </Button>
   </div>;

@@ -15,6 +15,7 @@ type TButtonProps = {
   inset?: boolean
   icon?: boolean
   children?: ReactNode,
+  hideText?: boolean
 };
 const Button = ({
   primary = false,
@@ -24,6 +25,7 @@ const Button = ({
   outlined = false,
   inset = false,
   icon = false,
+  hideText = false,
   backgroundColor,
   color,
   label,
@@ -38,7 +40,7 @@ const Button = ({
         'button-small': size === 'small',
         'button-large': size === 'large',
         'button-primary': primary,
-        'button-rounded': rounded,
+        'button-rounded': rounded || hideText,
         'button-round': round,
         'button-outlined': outlined,
         'button-inset': inset,
@@ -47,7 +49,7 @@ const Button = ({
       {...props}
     >
       {icon && <>{props.children}</>}
-      {label && <span>{label}</span>}
+      {label && !hideText && <span>{label}</span>}
     </button>
   );
 };

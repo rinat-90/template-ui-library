@@ -1,0 +1,10 @@
+import React from 'react';
+
+import {TSVGProps} from "../../../types";
+
+export const PrevIcon = ({ className, color }: TSVGProps): JSX.Element => (
+  <svg className={className} width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.5858 15L13 13.5858L7.34315 7.92893L13 2.27208L11.5858 0.857865L4.51472 7.92893L11.5858 15Z" fill={color} />
+    <path d="M2.65683 1L2.65683 15L0.656832 15L0.656831 1L2.65683 1Z" fill={color} />
+  </svg>
+);

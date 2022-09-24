@@ -1,0 +1,21 @@
+@import '../../styles/index.scss';
+
+.rsvp-buttons {
+  align-items: center;
+  color: $grey;
+  display: flex;
+  font-weight: $heavy-weight;
+  justify-content: space-evenly;
+  width: 100%;
+
+  .loading-container {
+    height: 48px;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+}

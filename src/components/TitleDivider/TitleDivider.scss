@@ -1,0 +1,15 @@
+@import '../../styles/index.scss';
+
+.title-divider {
+  border-bottom: 1px solid $grey;
+  line-height: .1em;
+  margin: 10px 1rem 20px 1rem;
+  text-align: center;
+
+  span {
+    background: #FFFFFF;
+    color: $dark-grey;
+    font-weight: $regular-weight;
+    padding: 0 3rem;
+  }
+}
