@@ -1,5 +1,5 @@
 import React from 'react';
-import {TSVGProps} from "../../../types";
+import {TSVGProps} from '../../../types';
 
 export const SmallChatIcon = ({ className, color, ...props }: TSVGProps): JSX.Element => (
   <svg {...props} className={className} fill={color} version="1.1" id="smallChat" x="0px" y="0px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.7 20.3">

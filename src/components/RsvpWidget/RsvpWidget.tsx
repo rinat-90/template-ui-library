@@ -1,7 +1,7 @@
-import './RsvpWidget.scss'
+import './RsvpWidget.scss';
 import React, {ReactElement} from 'react';
-import Progressbar from "../Progressbar";
-import RsvpButtonsGroup from "../RsvpButtonsGroup";
+import Progressbar from '../Progressbar';
+import RsvpButtonsGroup from '../RsvpButtonsGroup';
 
 
 type TRsvpWidgetProps = {

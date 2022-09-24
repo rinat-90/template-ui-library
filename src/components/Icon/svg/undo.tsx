@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {TSVGProps} from "../../../types";
+import {TSVGProps} from '../../../types';
 
 export const UndoIcon = ({ className, color }: TSVGProps): JSX.Element => (
   <svg className={className} width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">

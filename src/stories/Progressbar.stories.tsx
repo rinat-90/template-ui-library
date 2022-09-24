@@ -17,6 +17,6 @@ const Template: ComponentStory<typeof Progressbar> = (args) => <Progressbar {...
 export const DefaultProgressbar = Template.bind({});
 DefaultProgressbar.args = {
   maxValue: 100,
-  currentValue: 30
+  currentValue: 30,
 };
 

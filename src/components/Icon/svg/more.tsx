@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {TSVGProps} from "../../../types";
+import {TSVGProps} from '../../../types';
 
 export const MoreIcon = ({ className, color }: TSVGProps): JSX.Element => (
   <svg className={className} width="16" height="4" viewBox="0 0 16 4" fill="none" xmlns="http://www.w3.org/2000/svg">

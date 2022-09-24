@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {TSVGProps} from "../../../types";
+import {TSVGProps} from '../../../types';
 
 export const BuzzIcon = ({ className, color = '#221f1f', height = '20.75', width = '20.751'}: TSVGProps): JSX.Element => (
   <svg id="Chat" className={className} xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox={`0 0 ${width} ${height}`}>

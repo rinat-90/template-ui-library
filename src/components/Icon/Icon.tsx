@@ -1,4 +1,4 @@
-import './Icon.scss'
+import './Icon.scss';
 import React, {ReactElement} from 'react';
 import {iconMap} from './icon-map';
 

@@ -1,25 +1,25 @@
 import './Tabs.scss';
 import React, { ReactElement } from 'react';
 import classnames from 'classnames';
-import {TTabItems} from "../../types";
+import {TTabItems} from '../../types';
 
 interface TTabsProps {
   tabs: TTabItems[]
-  changeTab: (val?: any) => void
-  active?: any
+  changeTab: (val?: string | number) => void
+  active?: boolean
   textOnly?: boolean
   iconOnly?: boolean
   inset?: boolean
   showActiveText?: boolean
 }
 const Tabs: React.FC<TTabsProps> = ({
-   tabs,
-   changeTab,
-   active,
-   textOnly,
-   iconOnly,
-   inset,
-   showActiveText,
+  tabs,
+  changeTab,
+  active,
+  textOnly,
+  iconOnly,
+  inset,
+  showActiveText,
 }): ReactElement => {
   return <div className={classnames('tabs', { 'inset': inset })}>
     {tabs.length > 0 && tabs.map(tab => (
@@ -27,7 +27,7 @@ const Tabs: React.FC<TTabsProps> = ({
         key={tab.title}
         onClick={() => changeTab(tab.value)}
         className={classnames('tabs-item', {
-          'active': active === tab.value,
+          'active': active,
           'rounded': showActiveText,
         })}
       >
@@ -36,7 +36,7 @@ const Tabs: React.FC<TTabsProps> = ({
           : iconOnly && showActiveText
             ? <>
               {tab.icon && <span className='icon'>{tab.icon}</span>}
-              {tab.value === active && <span className='title'>{tab.title}</span>}
+              {active && <span className='title'>{tab.title}</span>}
             </>
             : textOnly ? <span className='title'>{tab.title}</span>
               :<>

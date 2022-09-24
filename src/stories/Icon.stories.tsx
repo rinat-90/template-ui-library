@@ -10,8 +10,8 @@ export default {
     color: { control: 'color' },
     name: {
       options: Object.keys(iconMap),
-      control: { type: 'select' }
-    }
+      control: { type: 'select' },
+    },
 
   },
 } as ComponentMeta<typeof Icon>;

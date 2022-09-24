@@ -1,6 +1,6 @@
-import './PlayerAvatar.scss'
+import './PlayerAvatar.scss';
 import React, {ReactElement} from 'react';
-import classNames from "classnames";
+import classNames from 'classnames';
 
 type TPlayerAvatarProps = {
   firstName: string;

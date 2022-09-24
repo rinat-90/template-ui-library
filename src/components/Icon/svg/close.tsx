@@ -3,7 +3,7 @@ import './svg.scss';
 import React from 'react';
 import classNames from 'classnames';
 
-import {TSVGProps} from "../../../types";
+import {TSVGProps} from '../../../types';
 
 type TCloseIconProps = TSVGProps & {
   hover?: boolean

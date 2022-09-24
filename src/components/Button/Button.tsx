@@ -1,6 +1,6 @@
-import './Button.scss'
+import './Button.scss';
 import React, {ReactElement, ReactNode} from 'react';
-import classNames from "classnames";
+import classNames from 'classnames';
 
 type TButtonProps = {
   primary?: boolean;
@@ -16,6 +16,7 @@ type TButtonProps = {
   icon?: boolean
   children?: ReactNode,
   hideText?: boolean
+  disabled?: boolean
 };
 const Button = ({
   primary = false,

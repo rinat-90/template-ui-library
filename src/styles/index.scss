@@ -2,3 +2,8 @@
 @import './typography.scss';
 @import './variables.scss';
 @import './mixins.scss';
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}

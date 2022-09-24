@@ -1,4 +1,4 @@
-import './Progressbar.scss'
+import './Progressbar.scss';
 import React, {ReactElement} from 'react';
 
 type TProgressbarProps = {

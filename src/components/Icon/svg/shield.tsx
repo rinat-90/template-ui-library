@@ -1,5 +1,5 @@
 import React from 'react';
-import {TSVGProps} from "../../../types";
+import {TSVGProps} from '../../../types';
 
 export const ShieldIcon = ({ className, color, ...props }: TSVGProps): JSX.Element => (
   <svg {...props} className={className} fill={color} version="1.1" id="shield" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24.5 25.4">

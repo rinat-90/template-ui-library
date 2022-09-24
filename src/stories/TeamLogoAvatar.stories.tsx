@@ -16,6 +16,6 @@ const Template: ComponentStory<typeof TitleDivider> = (args) => <TitleDivider {.
 
 export const DefaultTitleDivider = Template.bind({});
 DefaultTitleDivider.args = {
-  title: 'PLAYED'
+  title: 'PLAYED',
 };
 

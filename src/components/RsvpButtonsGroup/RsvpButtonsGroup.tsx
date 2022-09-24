@@ -1,7 +1,7 @@
-import './RsvpButtonsGroup.scss'
+import './RsvpButtonsGroup.scss';
 import React, {ReactElement} from 'react';
-import classNames from "classnames";
-import RsvpButton from "../RsvpButton";
+import classNames from 'classnames';
+import RsvpButton from '../RsvpButton';
 
 type TRsvpButtonsGroupProps = {
   disabled?: boolean;
@@ -46,7 +46,7 @@ const RsvpButtonsGroup = (props: TRsvpButtonsGroupProps): ReactElement => {
         />
       </div>
     )}
-  </section>
+  </section>;
 };
 
 export default RsvpButtonsGroup;

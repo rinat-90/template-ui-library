@@ -1,8 +1,8 @@
 import React, {ReactElement} from 'react';
 import * as Svg from './svg';
-import {TSVGProps} from "../../types";
+import {TSVGProps} from '../../types';
 
-export const iconMap: Record<string, any> = {
+export const iconMap: Record<string, (props: TSVGProps) => ReactElement> = {
   'add': (props: TSVGProps): ReactElement => React.createElement(Svg.AddIcon, {...props}),
   'airplane': (props: TSVGProps): ReactElement => React.createElement(Svg.AirplaneIcon, {...props}),
   'assists': (props: TSVGProps): ReactElement => React.createElement(Svg.AssistIcon, {...props}),
@@ -24,4 +24,4 @@ export const iconMap: Record<string, any> = {
   'target': (props: TSVGProps): ReactElement => React.createElement(Svg.TargetIcon, {...props}),
   'undo': (props: TSVGProps): ReactElement => React.createElement(Svg.UndoIcon, {...props}),
   // 'up-arrow': (props: TSVGProps): ReactElement => React.createElement(Svg.UpArrowIcon, {...props}),
-}
+};

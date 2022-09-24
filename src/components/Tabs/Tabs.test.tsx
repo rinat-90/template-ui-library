@@ -26,11 +26,11 @@ const tabs = [
 ];
 
 const changeTab = () => {
-
-}
+  return;
+};
 
 describe('Tabs', () => {
   test('render tabs component', () => {
-    render(<Tabs tabs={tabs} changeTab={changeTab} />)
+    render(<Tabs tabs={tabs} changeTab={changeTab} />);
   });
 });

@@ -2,7 +2,7 @@ import './svg.scss';
 
 import React from 'react';
 
-import {TSVGProps} from "../../../types";
+import {TSVGProps} from '../../../types';
 import classnames from 'classnames';
 
 type TUpArrowIconProps = TSVGProps & {

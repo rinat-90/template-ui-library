@@ -2,7 +2,7 @@ import './svg.scss';
 
 import React from 'react';
 
-import {TSVGProps} from "../../../types";
+import {TSVGProps} from '../../../types';
 
 type THeartIconProps = TSVGProps & {
   //Fill svg with $brand-color-primary if heart icon is active
