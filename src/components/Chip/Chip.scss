@@ -1,7 +1,33 @@
+@import '../../styles/index';
+
+$default-height: 32px;
+$xl-height: 66px;
+$lg-height: 54px;
+$sm-height: 24px;
+$xs-height: 16px;
+$chip-border-radius: 45px;
+
 .chip {
+  align-items: center;
+  justify-content: center;
   display: inline-flex;
-  background: #F7F7F7;
-  border-radius: 45px;
-  padding: 10px 15px;
-  text-transform: uppercase;
+  background: $light-grey;
+  border-radius: $chip-border-radius;
+  padding: 0 12px;
+  color: #EBEBEB;
+  height: $default-height;
+  gap: 6px;
+
+  &.outlined {
+    border: 1px solid $light-grey;
+    background-color: #fff;
+  }
+
+  &.sm {
+    height: $sm-height;
+  }
+
+  &.lg {
+    height: $lg-height
+  }
 }

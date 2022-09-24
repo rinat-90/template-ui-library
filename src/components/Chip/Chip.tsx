@@ -1,6 +1,7 @@
 import './Chip.scss';
 import React, {ReactElement} from 'react';
 import classNames from 'classnames';
+import Icon from '../Icon';
 
 type TChipProps = {
   active?: boolean
@@ -9,22 +10,42 @@ type TChipProps = {
   outlined?: boolean
   pill?: boolean
   label?: string
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   activeClass?: string
+  icon?: string
+  iconLeft?: boolean
+  iconRight?: boolean
+  iconColor?: string
 };
-const Chip = (props: TChipProps): ReactElement => {
+const Chip = ({
+  active,
+  color,
+  backgroundColor,
+  outlined,
+  pill,
+  label,
+  icon,
+  size ='sm',
+  activeClass,
+  iconLeft = true,
+  iconRight = false,
+  iconColor = '#000',
+}: TChipProps): ReactElement => {
   return (
     <div className={classNames('chip', {
-      'active': !props.activeClass,
-      'pill': props.pill,
-      'outlined': props.outlined,
-      'sm': props.size === 'sm',
-      'md': props.size === 'md',
-      'lg': props.size === 'lg',
+      'chip-icon': icon,
+      'active': !activeClass && active,
+      'pill': pill,
+      'outlined': outlined,
+      'sm': size === 'sm',
+      'md': size === 'md',
+      'lg': size === 'lg',
     })}
-    style={{ color: props.color, backgroundColor: props.backgroundColor }}
+    style={{ color: color, backgroundColor: backgroundColor }}
     >
-      {props.label}
+      {icon && iconLeft && !iconRight && <Icon name={icon} color={iconColor} />}
+      {label}
+      {icon && iconRight && <Icon name={icon} color={iconColor} />}
     </div>
   );
 };
