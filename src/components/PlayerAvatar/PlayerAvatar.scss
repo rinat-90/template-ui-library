@@ -2,6 +2,8 @@
 
 .player-avatar-container {
   position: relative;
+  display: inline-flex;
+  flex-direction: column;
 
   &.align-center {
     display: flex;
@@ -20,7 +22,6 @@
     height: $x-small-avatar-diameter;
     justify-content: center;
     overflow: hidden;
-    position: relative;
     text-transform: uppercase;
     width: $x-small-avatar-diameter;
 
@@ -73,11 +74,36 @@
     &.no {
       border: 4.5px solid $darker-grey;
     }
+
+    &.capitan {
+
+      &:before {
+        content: 'C';
+        position: absolute;
+        right: -4px;
+        bottom: -3px;
+        color: $dark-grey;
+      }
+    }
+
+    &.mvp {
+     &:before {
+       background-image: url('../../static/emoji/sport-medal.png');
+       background-position: center;
+       width: 32px;
+       height: 32px;
+       content: '';
+       position: absolute;
+       right: -4px;
+       bottom: -3px;
+     }
+    }
   }
 
   .notification-count {
-    right: 13px;
-    top: 0;
+    position: absolute;
+    right: -4px;
+    top: -4px;
   }
 
   .captain {
@@ -91,14 +117,6 @@
     &.margin-right {
       right: 18px;
     }
-  }
-
-  .mvp {
-    background-image: url('../../static/emoji/sport-medal.png');
-    background-position: center;
-    width: 32px;
-    height: 32px;
-    @extend .captain;
   }
 
   .player-name {
