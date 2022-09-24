@@ -3,7 +3,7 @@
 .button {
   border: none;
   background: $grey-3;
-  padding: 15px 0;
+  padding: 10px 0;
   border-radius: 5px;
   font-size: 15px;
   text-transform: uppercase;
@@ -33,7 +33,11 @@
   }
 
   &-round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
+    min-width: 48px;
     @include size(48px);
   }
 
@@ -41,5 +45,9 @@
     background: none;
     color: $deep-purple;
     border: 1px solid $deep-purple;
+  }
+
+  &-inset {
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.07);
   }
 }

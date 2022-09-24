@@ -1,10 +1,10 @@
 import './Button.scss'
-import React, {ReactElement} from 'react';
+import React, {ReactElement, ReactNode} from 'react';
 import classNames from "classnames";
 
 type TButtonProps = {
   primary?: boolean;
-  label: string
+  label?: string
   size?: 'small' | 'medium' | 'large';
   onClick?: () => void;
   backgroundColor?: string
@@ -12,6 +12,9 @@ type TButtonProps = {
   rounded?: boolean
   round?: boolean
   outlined?: boolean
+  inset?: boolean
+  icon?: boolean
+  children?: ReactNode,
 };
 const Button = ({
   primary = false,
@@ -19,6 +22,8 @@ const Button = ({
   rounded = false,
   round = false,
   outlined = false,
+  inset = false,
+  icon = false,
   backgroundColor,
   color,
   label,
@@ -35,12 +40,14 @@ const Button = ({
         'button-primary': primary,
         'button-rounded': rounded,
         'button-round': round,
-        'button-outlined': outlined
+        'button-outlined': outlined,
+        'button-inset': inset,
       })}
       style={{ backgroundColor, color } }
       {...props}
     >
-      {label}
+      {icon && <>{props.children}</>}
+      {label && <span>{label}</span>}
     </button>
   );
 };
