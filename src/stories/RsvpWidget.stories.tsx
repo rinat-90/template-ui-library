@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { RsvpWidget } from '../components';
+import {TRsvpStatus} from '../types';
 
 export default {
   title: 'Example/RsvpWidget',
@@ -16,7 +17,7 @@ const Template: ComponentStory<typeof RsvpWidget> = (args) => <RsvpWidget {...ar
 
 export const DefaultRsvpWidget = Template.bind({});
 DefaultRsvpWidget.args = {
-  rsvpStatus: 'yes',
+  rsvpStatus: TRsvpStatus.yes,
   attendanceCount: 3,
   rosterCount: 12,
 };

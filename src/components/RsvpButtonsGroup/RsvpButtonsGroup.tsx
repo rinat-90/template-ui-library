@@ -2,12 +2,13 @@ import './RsvpButtonsGroup.scss';
 import React, {ReactElement} from 'react';
 import classNames from 'classnames';
 import RsvpButton from '../RsvpButton';
+import {TRsvpStatus} from '../../types';
 
 type TRsvpButtonsGroupProps = {
   disabled?: boolean;
   handleRsvpIn?: (e: React.SyntheticEvent<HTMLElement, Event>) => void;
   handleRsvpOut?: (e: React.SyntheticEvent<HTMLElement, Event>) => void;
-  rsvpStatus: 'yes' | 'no';
+  rsvpStatus: TRsvpStatus;
   isLoading?: boolean;
   size?: 'small' | 'medium' | 'large';
   hideButtonsText?: boolean
@@ -31,17 +32,17 @@ const RsvpButtonsGroup = (props: TRsvpButtonsGroupProps): ReactElement => {
         <RsvpButton
           onClick={props.handleRsvpIn}
           rsvpStatus={props.rsvpStatus}
-          disabled={props.rsvpStatus === 'yes'}
+          disabled={props.rsvpStatus === TRsvpStatus.yes}
           text={'in'}
-          btnType={'yes'}
+          btnType={TRsvpStatus.yes}
           hideText={props.hideButtonsText}
         />
         <RsvpButton
           onClick={props.handleRsvpOut}
           rsvpStatus={props.rsvpStatus}
-          disabled={props.rsvpStatus === 'no'}
+          disabled={props.rsvpStatus === TRsvpStatus.no}
           text={'no'}
-          btnType={'no'}
+          btnType={TRsvpStatus.no}
           hideText={props.hideButtonsText}
         />
       </div>

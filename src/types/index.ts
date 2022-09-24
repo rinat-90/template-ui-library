@@ -12,3 +12,10 @@ export type TSVGProps = {
   height?: string;
   width?: string;
 }
+
+export enum TRsvpStatus {
+  yes = 'yes',
+  no = 'no',
+  unknown = 'unknown',
+  maybe = 'maybe',
+}

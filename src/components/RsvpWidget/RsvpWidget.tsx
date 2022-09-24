@@ -2,12 +2,13 @@ import './RsvpWidget.scss';
 import React, {ReactElement} from 'react';
 import Progressbar from '../Progressbar';
 import RsvpButtonsGroup from '../RsvpButtonsGroup';
+import {TRsvpStatus} from '../../types';
 
 
 type TRsvpWidgetProps = {
   disabled?: boolean;
   empty?: boolean
-  rsvpStatus: 'yes' | 'no'
+  rsvpStatus: TRsvpStatus
   handleRsvpIn?: (e: React.SyntheticEvent<HTMLElement, Event>) => void;
   handleRsvpOut?: (e: React.SyntheticEvent<HTMLElement, Event>) => void;
   attendanceCount: number

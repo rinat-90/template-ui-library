@@ -2,29 +2,30 @@ import './RsvpButton.scss';
 import React, {ReactElement} from 'react';
 import Button from '../Button';
 import classNames from 'classnames';
+import {TRsvpStatus} from '../../types';
 
 type TRsvpButtonProps = {
   text: string,
-  rsvpStatus: 'yes' | 'no' | null
+  rsvpStatus: TRsvpStatus
   disabled?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
-  btnType: string
+  btnType: TRsvpStatus
   hideText?: boolean
 };
 const RsvpButton = ({
   text,
-  rsvpStatus = null,
-  btnType,
+  rsvpStatus = TRsvpStatus.unknown,
+  btnType = TRsvpStatus.unknown,
   disabled,
   hideText,
 }: TRsvpButtonProps): ReactElement => {
 
   return <div className={classNames('rsvp-btn', {
-    'rsvp-yes': btnType === 'yes',
-    'rsvp-no': btnType === 'no',
-    'active': btnType === 'yes'
-      ? rsvpStatus === 'yes'
-      : rsvpStatus === 'no',
+    'rsvp-yes': btnType === TRsvpStatus.yes,
+    'rsvp-no': btnType === TRsvpStatus.no,
+    'active': btnType === TRsvpStatus.yes
+      ? rsvpStatus === TRsvpStatus.yes
+      : rsvpStatus === TRsvpStatus.no,
   })}>
     <Button icon inset rounded={!hideText} round={hideText} label={text} hideText={hideText} disabled={disabled}>
       <i className='rsvp-btn-icon' />

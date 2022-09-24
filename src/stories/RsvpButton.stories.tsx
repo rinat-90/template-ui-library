@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { RsvpButton } from '../components';
+import {TRsvpStatus} from '../types';
 
 export default {
   title: 'Example/RsvpButton',
@@ -14,56 +15,56 @@ const Template: ComponentStory<typeof RsvpButton> = (args) => <RsvpButton {...ar
 export const DefaultRsvpNo = Template.bind({});
 DefaultRsvpNo.args = {
   text: 'out.',
-  btnType: 'no',
+  btnType: TRsvpStatus.no,
 };
 
 export const DefaultRsvpYes = Template.bind({});
 DefaultRsvpYes.args = {
   text: 'in.',
-  btnType: 'yes',
+  btnType: TRsvpStatus.yes,
 };
 
 export const ActiveRsvpNo = Template.bind({});
 ActiveRsvpNo.args = {
   text: 'out.',
-  btnType: 'no',
-  rsvpStatus: 'no',
+  btnType: TRsvpStatus.no,
+  rsvpStatus: TRsvpStatus.no,
 };
 
 export const ActiveRsvpYes = Template.bind({});
 ActiveRsvpYes.args = {
   text: 'in.',
-  btnType: 'yes',
-  rsvpStatus: 'yes',
+  btnType: TRsvpStatus.yes,
+  rsvpStatus: TRsvpStatus.yes,
 };
 
 export const ActiveRsvpNoNoText = Template.bind({});
 ActiveRsvpNoNoText.args = {
   text: 'in.',
-  btnType: 'no',
-  rsvpStatus: 'no',
+  btnType: TRsvpStatus.no,
+  rsvpStatus: TRsvpStatus.no,
   hideText: true,
 };
 
 export const ActiveRsvpYesText = Template.bind({});
 ActiveRsvpYesText.args = {
   text: 'in.',
-  btnType: 'yes',
-  rsvpStatus: 'yes',
+  btnType: TRsvpStatus.yes,
+  rsvpStatus: TRsvpStatus.yes,
   hideText: true,
 };
 
 export const DefaultRsvpNoText = Template.bind({});
 DefaultRsvpNoText.args = {
   text: 'in.',
-  btnType: 'no',
+  btnType: TRsvpStatus.no,
   hideText: true,
 };
 
 export const DefaultRsvpYesText = Template.bind({});
 DefaultRsvpYesText.args = {
   text: 'in.',
-  btnType: 'yes',
+  btnType: TRsvpStatus.yes,
   hideText: true,
 };
 
