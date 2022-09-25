@@ -1,15 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import TitleDivider from '../TitleDivider';
 
-import { TitleDivider } from '../components';
 
 export default {
   title: 'Example/TitleDivider',
   component: TitleDivider,
-  argTypes: {
-    // backgroundColor: { control: 'color' },
-    // color: { control: 'color' },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof TitleDivider>;
 
 const Template: ComponentStory<typeof TitleDivider> = (args) => <TitleDivider {...args} />;

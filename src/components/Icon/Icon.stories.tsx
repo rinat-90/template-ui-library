@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {iconMap} from '../components/Icon/icon-map';
-import { Icon } from '../components';
+import {iconMap} from './icon-map';
+import Icon from './Icon';
 
 export default {
   title: 'Example/Icons',

@@ -1,16 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { RsvpWidget } from '../components';
-import {TRsvpStatus} from '../types';
+import {TRsvpStatus} from '../../types';
+import RsvpWidget from './RsvpWidget';
 
 export default {
   title: 'Example/RsvpWidget',
   component: RsvpWidget,
-  argTypes: {
-    // backgroundColor: { control: 'color' },
-    // color: { control: 'color' },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof RsvpWidget>;
 
 const Template: ComponentStory<typeof RsvpWidget> = (args) => <RsvpWidget {...args} />;

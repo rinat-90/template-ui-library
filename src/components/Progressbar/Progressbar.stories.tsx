@@ -1,15 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Progressbar } from '../components';
+import Progressbar from './Progressbar';
 
 export default {
   title: 'Example/Progressbar',
   component: Progressbar,
-  argTypes: {
-    // backgroundColor: { control: 'color' },
-    // color: { control: 'color' },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Progressbar>;
 
 const Template: ComponentStory<typeof Progressbar> = (args) => <Progressbar {...args} />;

@@ -19,3 +19,10 @@ export enum TRsvpStatus {
   unknown = 'unknown',
   maybe = 'maybe',
 }
+
+export enum TStats {
+  SCORE = 'SCORE',
+  GOALS = 'GOALS',
+  ASSISTS = 'ASSISTS',
+  POTM = 'POTM',
+}

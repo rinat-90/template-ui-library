@@ -1,13 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import TeamLogoAvatar from '../TeamLogoAvatar';
 
-import { TeamLogoAvatar } from '../components';
 
 export default {
   title: 'Example/TeamLogoAvatar',
   component: TeamLogoAvatar,
-  argTypes: {
-  },
+  argTypes: {},
 } as ComponentMeta<typeof TeamLogoAvatar>;
 
 const Template: ComponentStory<typeof TeamLogoAvatar> = (args) => <TeamLogoAvatar {...args} />;

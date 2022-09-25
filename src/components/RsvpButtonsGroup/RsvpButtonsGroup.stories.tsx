@@ -1,14 +1,13 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {TRsvpStatus} from '../../types';
+import RsvpButtonsGroup from './RsvpButtonsGroup';
 
-import { RsvpButtonsGroup } from '../components';
-import {TRsvpStatus} from '../types';
 
 export default {
   title: 'Example/RsvpButtonsGroup',
   component: RsvpButtonsGroup,
-  argTypes: {
-  },
+  argTypes: {},
 } as ComponentMeta<typeof RsvpButtonsGroup>;
 
 const Template: ComponentStory<typeof RsvpButtonsGroup> = (args) => <RsvpButtonsGroup {...args} />;

@@ -1,13 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { PlayerAvatar } from '../components';
+import PlayerAvatar from './PlayerAvatar';
 
 export default {
   title: 'Example/PlayerAvatar',
   component: PlayerAvatar,
-  argTypes: {
-  },
+  argTypes: {},
 } as ComponentMeta<typeof PlayerAvatar>;
 
 const Template: ComponentStory<typeof PlayerAvatar> = (args) => <PlayerAvatar {...args} />;

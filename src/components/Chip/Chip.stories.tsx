@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Chip } from '../components';
-import {iconMap} from '../components/Icon/icon-map';
+import {iconMap} from '../Icon/icon-map';
+import Chip from './Chip';
 
 export default {
   title: 'Example/Chip',

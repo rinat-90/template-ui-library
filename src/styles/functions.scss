@@ -1,9 +1,9 @@
 @function calc-pt-to-px($pt) {
-  @return calc($pt / 1pt) * 1.333px;
+  @return $pt / 1pt * 1.333px;
 }
 
 @function calc-px-to-rem($px) {
-  @return  calc($px / 16px) * 1rem;
+  @return  $px / 16px * 1rem;
 }
 
 @function calc-pt-to-rem($pt) {

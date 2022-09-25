@@ -1,8 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { RsvpButton } from '../components';
-import {TRsvpStatus} from '../types';
+import {TRsvpStatus} from '../../types';
+import RsvpButton from './RsvpButton';
 
 export default {
   title: 'Example/RsvpButton',
