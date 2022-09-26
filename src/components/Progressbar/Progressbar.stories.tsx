@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Progressbar from './Progressbar';
 
 export default {
-  title: 'Example/Progressbar',
+  title: 'Components/Progressbar',
   component: Progressbar,
   argTypes: {},
 } as ComponentMeta<typeof Progressbar>;

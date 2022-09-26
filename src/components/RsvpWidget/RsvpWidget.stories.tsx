@@ -4,7 +4,7 @@ import {TRsvpStatus} from '../../types';
 import RsvpWidget from './RsvpWidget';
 
 export default {
-  title: 'Example/RsvpWidget',
+  title: 'Components/RsvpWidget',
   component: RsvpWidget,
   argTypes: {},
 } as ComponentMeta<typeof RsvpWidget>;

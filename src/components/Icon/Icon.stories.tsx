@@ -4,7 +4,7 @@ import {iconMap} from './icon-map';
 import Icon from './Icon';
 
 export default {
-  title: 'Example/Icons',
+  title: 'Components/Icons',
   component: Icon,
   argTypes: {
     color: { control: 'color' },

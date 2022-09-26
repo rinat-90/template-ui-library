@@ -4,7 +4,7 @@ import TeamLogoAvatar from '../TeamLogoAvatar';
 
 
 export default {
-  title: 'Example/TeamLogoAvatar',
+  title: 'Components/TeamLogoAvatar',
   component: TeamLogoAvatar,
   argTypes: {},
 } as ComponentMeta<typeof TeamLogoAvatar>;

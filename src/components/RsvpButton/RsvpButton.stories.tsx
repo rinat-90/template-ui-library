@@ -4,7 +4,7 @@ import {TRsvpStatus} from '../../types';
 import RsvpButton from './RsvpButton';
 
 export default {
-  title: 'Example/RsvpButton',
+  title: 'Components/RsvpButton',
   component: RsvpButton,
   argTypes: {},
 } as ComponentMeta<typeof RsvpButton>;

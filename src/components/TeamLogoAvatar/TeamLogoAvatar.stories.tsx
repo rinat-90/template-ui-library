@@ -4,7 +4,7 @@ import TitleDivider from '../TitleDivider';
 
 
 export default {
-  title: 'Example/TitleDivider',
+  title: 'Components/TitleDivider',
   component: TitleDivider,
   argTypes: {},
 } as ComponentMeta<typeof TitleDivider>;

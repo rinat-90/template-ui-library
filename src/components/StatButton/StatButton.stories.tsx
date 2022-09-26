@@ -4,7 +4,7 @@ import {TStats} from '../../types';
 import StatButton from './StatButton';
 
 export default {
-  title: 'Example/StatButton',
+  title: 'Components/StatButton',
   component: StatButton,
   argTypes: {},
 } as ComponentMeta<typeof StatButton>;

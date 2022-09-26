@@ -4,7 +4,7 @@ import {iconMap} from '../Icon/icon-map';
 import Chip from './Chip';
 
 export default {
-  title: 'Example/Chip',
+  title: 'Components/Chip',
   component: Chip,
   argTypes: {
     icon: {

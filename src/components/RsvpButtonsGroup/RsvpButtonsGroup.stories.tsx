@@ -5,7 +5,7 @@ import RsvpButtonsGroup from './RsvpButtonsGroup';
 
 
 export default {
-  title: 'Example/RsvpButtonsGroup',
+  title: 'Components/RsvpButtonsGroup',
   component: RsvpButtonsGroup,
   argTypes: {},
 } as ComponentMeta<typeof RsvpButtonsGroup>;
