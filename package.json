@@ -1,6 +1,6 @@
 {
   "name": "@rinat-90/template-ui-library",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Bantr UI Library",
   "scripts": {
     "rollup": "rollup -c",
