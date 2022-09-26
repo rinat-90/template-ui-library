@@ -27,12 +27,14 @@ const StatButton = ({
     return  '';
   };
 
-  return <Button onClick={onClick} label={eventStatsButtonText()} rounded icon>
-    <i className={classNames('stat-btn-icon', {
-      'face-icon': type !== TStats.POTM,
-      'medal-icon': type === TStats.POTM,
-    })} />
-  </Button>;
+  return <div className='stat-button'>
+    <Button onClick={onClick} label={eventStatsButtonText()} rounded icon>
+      <i className={classNames('stat-btn-icon', {
+        'face-icon': type !== TStats.POTM,
+        'medal-icon': type === TStats.POTM,
+      })} />
+    </Button>
+  </div>;
 };
 
 export default StatButton;
