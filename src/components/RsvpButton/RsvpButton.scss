@@ -74,6 +74,7 @@ $icons: (
     font-style: italic;
     color: #FFFFFF;
     border-radius: 50px;
+    background-color: $grey-3;
 
     &:hover {
       background: linear-gradient(90deg, $lighter-purple 0%, $deep-purple 129.2%);
@@ -88,7 +89,6 @@ $icons: (
 
   &.rsvp-yes {
     .button {
-      //background-color: $brand-color-primary;
 
       i.rsvp-btn-icon{
         background-image: url(map-get($icons, 'smiling-face-faded'));
