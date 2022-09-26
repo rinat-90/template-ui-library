@@ -1,3 +1,39 @@
 @import '../../styles/index.scss';
 
+$icons: (
+  'nerd-face': '../../static/emoji/nerd-face.png',
+  'sport-medal': '../../static/emoji/sport-medal.png',
+);
 
+.button {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: #B07AF0;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 25px;
+  color: #fff;
+  width: 260px;
+
+  .stat-btn-icon {
+    display: block;
+    height: 32px;
+    width: 32px;
+
+    &.face-icon {
+      background-image: url(map-get($icons, 'nerd-face'));
+      height: 32px;
+      width: 32px;
+    }
+
+    &.medal-icon {
+      background-image: url(map-get($icons, 'sport-medal'));
+      height: 32px;
+      width: 32px;
+    }
+  }
+}

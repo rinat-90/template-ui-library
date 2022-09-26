@@ -1,11 +1,11 @@
-import './RsvpButton.scss';
+import './StatButton.scss';
 import React, {ReactElement} from 'react';
 import Button from '../Button';
 import classNames from 'classnames';
 import {TStats} from '../../types';
 
 type TStatButtonProps = {
-  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClick?: () => void;
   type: TStats
 };
 const StatButton = ({
@@ -13,13 +13,26 @@ const StatButton = ({
   type,
 }: TStatButtonProps): ReactElement => {
 
-  return <div className={classNames('rsvp-btn', {
+  const eventStatsButtonText = (): string => {
+    if (type === TStats.SCORE) {
+      return 'add score';
+    }
+    if (type === TStats.GOALS || type === TStats.ASSISTS) {
+      return 'track stats';
+    }
+    if (type === TStats.POTM) {
+      return 'vote 4 potm';
+    }
 
-  })}>
-    <Button rounded  label={'text'}>
-      <i className='rsvp-btn-icon' />
-    </Button>
-  </div>;
+    return  '';
+  };
+
+  return <Button onClick={onClick} label={eventStatsButtonText()} rounded icon>
+    <i className={classNames('stat-btn-icon', {
+      'face-icon': type !== TStats.POTM,
+      'medal-icon': type === TStats.POTM,
+    })} />
+  </Button>;
 };
 
 export default StatButton;
