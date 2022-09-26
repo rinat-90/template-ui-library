@@ -4,6 +4,6 @@ export default create({
   base: 'light',
   brandTitle: 'Bantr',
   brandUrl: 'https://app.bantr.club/',
-  brandImage: 'https://place-hold.it/350x150',
+  brandImage: '',
   brandTarget: '_self',
 });
